@@ -1,0 +1,42 @@
+@import "../../../../style/variables.less";
+
+.custom-menu {
+  width: 224px !important;
+  height: 292px;
+  display: flex;
+  background: #ffffff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+  padding: 24px;
+  border: 1px solid @error-color;
+  overflow-y: scroll;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+  .ant-dropdown-menu-item {
+    clear: both;
+    margin: 5px;
+    color: @link-color;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: normal;
+    padding: 0px;
+    width: 48px;
+    height: 48px;
+    line-height: 44px;
+    text-align: center;
+    border: 1px solid #535353;
+    color: #535353;
+    background: #fff;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.18) !important;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.18) !important;
+  }
+  .ant-dropdown {
+    top: 33.09px !important;
+  }
+}

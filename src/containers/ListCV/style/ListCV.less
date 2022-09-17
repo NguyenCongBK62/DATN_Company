@@ -1,0 +1,24 @@
+@import '../../../style/variables.less';
+
+.hiragana-list-radio {
+  .ant-radio-button-wrapper:not(:first-child)::before {
+    background-color: @primary-color !important;
+  }
+  .ant-radio-button-wrapper {
+    flex-basis: 100%;
+    text-align: center;
+    font-family: @font-japanese;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid @primary-color !important;
+  }
+
+  .ant-radio-button-wrapper-checked {
+    background-color: @primary-color!important;
+    color: @white !important;
+    border: none;
+    &:focus {
+      outline: none;
+    }
+  }
+}

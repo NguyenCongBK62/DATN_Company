@@ -1,0 +1,311 @@
+@import '../../../style/variables.less';
+
+.header {
+  position: fixed;
+  top: 0;
+  height: 110px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(80px);
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid @error-color;
+  z-index: 450;
+  padding-right: 34px;
+  padding-left: 40px;
+}
+
+.logo {
+  margin-top: 24px;
+  position: absolute;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 24px;
+  letter-spacing: 0.15em;
+  color: @primary-color;
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  margin-top: 34px;
+  list-style: none;
+  align-items: center;
+  justify-content: flex-end;
+  .menu-items {
+    margin-top: 1px;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    cursor: pointer;
+    // border: 1px solid @error-color;
+    text-align: center;
+  }
+  .profile-icon {
+    width: 42px;
+    height: 42px;
+    margin-left: 24px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50%;
+  }
+  .icon {
+    position: relative;
+    bottom: 6px;
+  }
+}
+
+.menu-items-dropdown {
+  top: 95.09px !important;
+}
+
+.search {
+  justify-content: center;
+  display: flex;
+  .search-bar {
+    margin-top: 35px;
+    width: 423px;
+    height: 40px;
+    border-radius: 32px;
+    border: 1px solid #dddddd;
+    .ant-input:focus {
+      background: #fff !important;
+      padding-left: 10px;
+    }
+  }
+}
+
+.search-bar-reservation {
+  width: 299px;
+  height: 40px;
+  border: 1px solid #dddddd;
+  box-sizing: border-box;
+  border-radius: 32px;
+}
+
+.ant-dropdown-menu {
+  width: 317px;
+  height: 428px;
+  background: #ffffff;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 32px 24px;
+  border: 1px solid @error-color;
+  overflow-y: scroll;
+  .ant-dropdown-menu-item {
+    clear: both;
+    margin: 0;
+    color: @link-color;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    cursor: pointer;
+    transition: all 0.3s;
+    white-space: normal;
+    padding: 0px;
+  }
+  p {
+    margin: 0;
+    padding: 16px 0px 0px;
+    font-family: Noto Sans CJK JP;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 19px;
+  }
+  .ant-divider {
+    margin: 16px 0px 0px 0px;
+    border-top: 1px solid @error-color;
+  }
+}
+
+.ant-dropdown-arrow {
+  width: 18px !important;
+  height: 18px !important;
+  border-width: 9px !important;
+  top: 6px !important;
+  right: 12px !important;
+}
+
+.ant-dropdown-open {
+  background: #eeeff5 !important;
+  border-radius: 3px;
+  &::after {
+    border: none;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.ant-dropdown-menu::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.ant-dropdown-menu {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.ant-dropdown-menu-item:hover {
+  background-color: #ffffff;
+}
+
+.selected-store {
+  font-family: Noto Sans CJK JP;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px !important;
+  line-height: 21px !important;
+  color: @primary-color;
+  cursor: text;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.store {
+  height: 428px;
+  span {
+    float: right;
+    width: 40px;
+    height: 17px;
+    background: @success-color;
+    border-radius: 2px;
+    font-family: Noto Sans CJK JP;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 15px;
+    padding: 2px 5px;
+    color: #ffffff;
+    margin: 18px 0px 0px;
+  }
+}
+
+.reservation-search {
+  width: 537px;
+  height: 435px;
+}
+
+.notice-dropdown-menu {
+  width: 400px;
+}
+
+.user-dropdown {
+  height: fit-content;
+  p {
+    margin: 0;
+    padding: 16px 0px 0px;
+    font-family: Noto Sans CJK JP;
+    font-style: normal;
+    font-size: 16px !important;
+    line-height: 21px !important;
+  }
+}
+
+.elipsis-p-notice {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.second-header {
+  .menu {
+    margin-top: 9px !important;
+    .menu-items {
+      width: 100%;
+    }
+  }
+}
+
+.responsiveSecondNavbar() {
+  .backdrop {
+    top: 130px !important;
+  }
+  .menu-items-dropdown {
+    top: 131.09px !important;
+    width: 100% !important;
+    padding: 10px 15px !important;
+  }
+  .reservation-search {
+    width: 100% !important;
+  }
+  .store {
+    width: 100% !important;
+  }
+  .ant-dropdown-menu {
+    width: 100% !important;
+  }
+
+  .store-dropdown {
+    .ant-dropdown-arrow {
+      left: 66% !important;
+    }
+  }
+  .notice-dropdown {
+    .ant-dropdown-arrow {
+      left: 48% !important;
+    }
+  }
+  .user-dropdown-arrow {
+    .ant-dropdown-arrow {
+      left: 88% !important;
+    }
+  }
+  .reservation-dropdown {
+    .ant-dropdown-arrow {
+      left: 10.7% !important;
+    }
+  }
+  .responsive-search-reservation {
+    flex-direction: column;
+    div {
+      max-width: 100%;
+      .ant-picker {
+        width: 100% !important;
+        margin-top: 16px;
+      }
+      .search-bar-reservation {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.nav-help-icon {
+  background-color: #eeeff5 !important;
+  border: 1px solid white !important;
+  border-radius: 3px !important;
+  height: 50px !important;
+  width: 50px !important;
+  box-shadow: none !important;
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .responsiveSecondNavbar();
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-width: 1023px) and (orientation: portrait) {
+  .responsiveSecondNavbar();
+}
+.notice-item {
+  position: relative;
+  p {
+    font-size: 14px;
+  }
+  span {
+    position: absolute;
+    top: 5px;
+    cursor: pointer;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

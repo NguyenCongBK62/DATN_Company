@@ -1,0 +1,108 @@
+@import '../../../style/variables.less';
+
+.form-wrapper {
+  padding-right: 25px;
+}
+
+.form-fields-container {
+  font-family: Noto Sans CJK JP;
+}
+
+.form-section {
+  padding: 32px;
+  border-radius: 5px;
+  background: #ffffff;
+  border: 1px solid @error-color;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  &-header {
+    font-size: 16px;
+    font-weight: 700;
+    h2 {
+      color: @primary-color;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.input-group {
+  .input-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    &-tag {
+      color: white;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: bold;
+
+      width: 32px;
+      height: 18px;
+      background-color: @success-color;
+      border-radius: 2px;
+      margin-right: 10px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-text {
+      display: inline-block;
+      color: @text-color;
+
+      font-size: 14px;
+      font-style: normal;
+      font-weight: normal;
+      padding-top: 5px;
+    }
+  }
+  .input-element {
+    position: relative;
+    padding-bottom: 20px;
+  }
+  .calender-label {
+    padding-top: 15px;
+    font-size: 16px;
+  }
+}
+
+.input-elements-inline {
+  display: flex;
+}
+
+.input-footer {
+  color: @text-color;
+  margin-top: 13px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.list-custom {
+  display: flex;
+  width: 100%;
+}
+
+/* ----------- iPads----------- */
+.responsiveForm() {
+  .form-wrapper {
+    padding-right: 0px !important;
+  }
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .responsiveForm();
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-width: 1023px) and (orientation: portrait) {
+  .responsiveForm();
+}
+
+.ck-rounded-corners .ck.ck-editor__main > .ck-editor__editable,
+.ck.ck-editor__main > .ck-editor__editable.ck-rounded-corners {
+  border-radius: var(--ck-border-radius);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding-left: 30px;
+}

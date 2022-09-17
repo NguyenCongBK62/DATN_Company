@@ -1,0 +1,49 @@
+@import "../../../style/variables.less";
+
+.data-side-preview {
+  padding-bottom: 12px;
+  max-width: 360px;
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+
+  .ant-card {
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    max-height: calc(100vh - 220px);
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  .data-side-section {
+    font-size: 13px;
+    font-weight: 400;
+    padding-bottom: 20px;
+    &-header {
+      font-weight: 700;
+      border-bottom: 1px solid #dbdbdb;
+      padding-bottom: 8px;
+      color: @primary-color;
+    }
+  }
+  .data-side-section-preview {
+    padding-top: 16px;
+    font-size: 13px;
+
+    .data-preview-label {
+      margin-top: 0;
+      padding-right: 10px;
+      margin-bottom: 0.5em;
+      color: @primary-color;
+      font-weight: 500;
+    }
+    .data-preview-value {
+      width: 100%;
+      overflow-wrap: break-word;
+    }
+  }
+}
+
+.detail-view-responsive-btn {
+  display: none;
+}
